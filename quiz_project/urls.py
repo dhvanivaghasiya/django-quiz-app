@@ -21,3 +21,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('quiz.urls')),
 ]
+from django.urls import path
+from quiz import views
+
+urlpatterns = [
+    path('accounts/login/', views.user_login), 
+]
